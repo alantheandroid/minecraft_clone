@@ -8,7 +8,7 @@
 - Gravity ✅
 - Movement ✅
 - State management ✅
-- Cubes
+- Cubes ✅
 - Cube type selector
 - Save world in localstorage
 - Build a house
