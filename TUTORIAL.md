@@ -2,6 +2,7 @@
 - Sky ✅
 - Textures and images ✅
 - Ground ✅
+- Keyboard inputs ✅
 - Player
 - First person view
 - Gravity
