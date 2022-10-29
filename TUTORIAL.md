@@ -4,9 +4,9 @@
 - Ground ✅
 - Keyboard inputs ✅
 - Player ✅
-- First person view
-- Gravity
-- Movement
+- First person view ✅
+- Gravity ✅
+- Movement ✅
 - State management
 - Cubes
 - Cube type selector
