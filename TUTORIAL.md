@@ -1,5 +1,5 @@
 - Boilerplate ✅
-- Sky
+- Sky ✅
 - Textures and images
 - Ground
 - Player
