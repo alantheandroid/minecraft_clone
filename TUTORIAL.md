@@ -1,6 +1,6 @@
 - Boilerplate ✅
 - Sky ✅
-- Textures and images
+- Textures and images ✅
 - Ground
 - Player
 - First person view
