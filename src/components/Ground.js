@@ -1,7 +1,6 @@
 import React from "react";
 import { usePlane } from "@react-three/cannon";
 import { groundTexture } from "../images/textures";
-import { RepeatWrapping } from "three";
 
 export default function Ground() {
   const [planeRef] = usePlane(() => ({
@@ -11,8 +10,6 @@ export default function Ground() {
   }));
 
   // set groundTexture to be repeated across the mesh
-  groundTexture.wrapS = RepeatWrapping;
-  groundTexture.wrapT = RepeatWrapping;
   groundTexture.repeat.set(100, 100);
 
   return (
