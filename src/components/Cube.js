@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useBox } from "@react-three/cannon";
 import useStore from "../hooks/useStore";
 import * as textures from "../images/textures";
 
 export default function Cube({ position, texture }) {
+  const [isHovered, setIsHovered] = useState();
   const [cubeRef] = useBox(() => ({
     type: "Static",
     position,
@@ -40,9 +41,26 @@ export default function Cube({ position, texture }) {
   }
 
   return (
-    <mesh onClick={(e) => handleAddCube(e)} ref={cubeRef}>
+    <mesh
+      onPointerMove={(e) => {
+        e.stopPropagation();
+        setIsHovered(true);
+      }}
+      onPointerOut={(e) => {
+        e.stopPropagation();
+        setIsHovered(false);
+      }}
+      onClick={(e) => handleAddCube(e)}
+      ref={cubeRef}
+    >
       <boxGeometry attach={"geometry"} />
-      <meshStandardMaterial map={activeTexture} attach={"material"} />
+      <meshStandardMaterial
+        map={activeTexture}
+        color={isHovered ? "lightgrey" : "white"}
+        transparent={true}
+        opacity={texture === "glass" ? 0.75 : 1}
+        attach={"material"}
+      />
     </mesh>
   );
 }
