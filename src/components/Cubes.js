@@ -1,5 +1,5 @@
 import React from "react";
-import { useStore } from "../hooks/useStore";
+import useStore from "../hooks/useStore";
 import Cube from "./Cube";
 
 export default function Cubes() {

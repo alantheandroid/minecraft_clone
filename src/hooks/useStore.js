@@ -1,7 +1,7 @@
 import create from "zustand";
 import { nanoid } from "nanoid";
 
-export const useStore = create((set) => ({
+const useStore = create((set) => ({
   texture: "dirt",
   cubes: [],
   addCube: (x, y, z) => {
@@ -24,7 +24,13 @@ export const useStore = create((set) => ({
       }),
     }));
   },
-  setTexture: () => {},
+  setTexture: (texture) => {
+    set(() => ({
+      texture,
+    }));
+  },
   saveWorld: () => {},
   resetWorld: () => {},
 }));
+
+export default useStore;

@@ -53,3 +53,18 @@ body {
 .cursor {
   color: white;
 }
+
+.texture-selector {
+  top: 80%;
+  left: 50%;
+  transform: scale(3);
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.texture-selector img.active {
+  transform: scale(1.25);
+  border-radius: 00.25rem;
+  border: 2px outset lightgrey;
+}
